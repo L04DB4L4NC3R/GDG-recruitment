@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Logout
+{% endblock %}
+
+{% block body %}
+<h2 style="text-align:center;color:red;">You have successfully been logged out</h2>
+<br>
+<a style="color:red;" href= {{ url_for("index") }} > go back </a>
+{% endblock %}

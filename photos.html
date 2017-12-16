@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Photos
+{% endblock %}
+
+{% block body %}
+<div style="width:100%;">
+    <h2 style="color:magenta;text-align:center">Click on an image to delete it</h2>
+    <a href="{{url_for('logout')}}"><h3 style="color:blue;">Logout</h3></a>
+    <br>
+    <a href="{{url_for('users')}}"><h3 style="color:blue;">See users</h3></a>
+    <br>
+    <a href="{{url_for('home')}}"><h3 style="color:blue;">go back</h3></a>
+    
+    {% for i in data %}
+        <br>
+        <a href="{{ url_for('rmv',val=i )  }}" ><img style="width:100%;height:25%" src="{{i}}"/></a>
+        <br>
+    {% endfor %}
+    <br>
+    <a href="{{url_for('page')}}"><h3 style="color:blue;">Add more images</h3></a>
+    <br>
+    
+</div>
+{% endblock %}

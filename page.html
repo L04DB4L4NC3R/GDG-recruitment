@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Page
+{% endblock %}
+
+
+{% block body %}
+<div style = "text-align: center; color:blue; font-size: 150%; height: 800px; background-color: yellow;">
+    <form action= '{{ url_for("page") }}' method = "post">
+        <p>
+        <input style="width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;" name="link" type="text" placeholder="Enter URL here"/>
+        </p>
+        <input style="width:200px;height:200px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;" type="submit" value = "Add image" />
+    </form>
+    <br>
+    or login <a style="color:blue;" href="{{url_for('login')}}">here</a>
+    
+    <p>
+    <img src = "https://cdn.lynda.com/course/83603/83603-636216266356158373-16x9.jpg" />
+    </p>
+    
+    <p>
+    <img src = "http://ubuntu.doubtech.com/wp-content/uploads/2014/06/GDG-program-logo.png">
+        </p>
+        <br>
+        Click <a style="color:red;" href="{{url_for('users')}}"> here</a> to view registered users
+        <br>
+        <div style="color:blue;">For unregistering type /unregister/Your_registration_number in the url</div>
+</div>
+
+{% endblock %}
+
+

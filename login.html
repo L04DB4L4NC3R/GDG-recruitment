@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Login!
+{% endblock %}
+
+
+{% block body %}
+<div style = "text-align: center; color:blue; font-size: 150%; height: 800px; background-color: yellow;">
+<form action= '{{ url_for("login") }}' method = "post">
+    <p>
+    <input style="width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;" name="name" type="text" placeholder="Name" />
+    </p>
+    <input style="width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;" name="password" type="password" placeholder="Password"/>
+    <br/>
+    <input style="width: 200px;height:200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;" type="submit" value = "Login" />
+</form>
+<br>
+ or register <a style="color:blue;" href="{{url_for('index')}}">here</a>
+
+<p>
+<img src = "https://cdn.lynda.com/course/83603/83603-636216266356158373-16x9.jpg" />
+</p>
+
+<p>
+<img src = "http://ubuntu.doubtech.com/wp-content/uploads/2014/06/GDG-program-logo.png">
+</p>
+<br>
+Click <a style="color:red;" href="{{url_for('users')}}"> here</a> to view registered users
+<br>
+
+{% endblock %}
+

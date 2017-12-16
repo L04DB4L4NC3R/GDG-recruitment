@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+HOME
+{% endblock %}
+
+{% block body %}
+<a style="color:red;text-align:center" href="{{url_for('page')}}"> <h2>Add photos</h2></a>
+<br>
+<a style="color:red;text-align:center" href="{{url_for('photos')}}"> <h2>See your photos</h2></a>
+<br>
+<a style="color:red;text-align:center" href="{{url_for('logout')}}"><h2>Logout</h2></a>
+<br>
+<a style="color:red;text-align:center" href="{{url_for('users')}}"><h2>See list of users registered with us</h2></a>
+<br>
+<a style="color:red;text-align:center" href="{{url_for('unregister')}}"><h2>Unregister</h2></a>
+{% endblock %}
